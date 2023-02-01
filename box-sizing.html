@@ -2,21 +2,63 @@
 <html>
     <head>
         <style>
-            .parent{
-                background-color: brown;
+            h1{
+                background-color: black;
+                color:white;
+                text-align: center;
             }
+            
+            .parent{
+                background-color:chocolate;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 500px;
+    height: 400px;
+    text-align: left;
+    border:solid black;
+            }
+            .child1{
+                background-color: lightcoral;
+    height: 300px;
+    width: 400px;
+    display: flex;
+    z-index: 1;
+    border:solid black;
+            }
+            .child2{
+                background-color: lightgreen;
+    z-index: 2;
+    height: 200px;
+    width: 300px;
+    position: fixed;
+    border:solid black;
+}
+.child3{
+    background-color:cornflowerblue;
+    z-index: 2;
+    height:100px;
+    width: 200px;
+    position:fixed;
+    text-align: center;
+    align-items: center;
+    border:solid black;
+    justify-content: center;
+}
+            
 
         </style>
         <title>
-           box-sizing 
+            box sizing 
         </title>
     </head>
     <body>
-        <div class="parent">margin
-            <div class="child1">border</div>
-            <div class="child2">padding</div>
-            <div class="child3">678*400</div>
-        </div>
-
+        <h1>ASSINGMENT-3</h1>
+        <div class="parent">
+            
+            <div class="child1">Border </div>
+            <div class="child2" >padding</div>
+            <div class="child3">400*400</div>
+</div>
     </body>
 </html>
