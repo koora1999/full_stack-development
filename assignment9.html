@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="./images/sss.jpg" type="image/x-icon">
+        <style>
+        body{
+            border:2px solid black;
+            border-radius: 20px;
+        }
+           .header{
+            background-color: rgb(202, 206, 205);
+            width:100%;
+            height:1000px;
+            border-radius: 20px;
+        
+           }
+           .webpage{
+            display:flex;
+            flex-direction: row;
+            background-color: blue;
+            justify-content: center;
+            height:40px;
+            border-radius: 20px;
+            
+           }
+           ul{
+            display:flex;
+            list-style-type: none;
+            align-items: center;
+            
+           }
+           ul>div{
+            display:flex;
+            font-weight: bold;
+            font-size: 20px;
+            padding:10px;
+            margin:20px;
+            color:white
+        
+           }
+           .block1{
+              background-color:aliceblue;
+              position:absolute;
+              width:250px;
+              height:500px;
+              flex-direction: column;
+              left:210px;
+              border-radius: 20px;
+
+           }
+           .block1>div{
+            position:relative;
+            line-height: 50px;
+            left:10px;
+            font-weight: bold;
+            font-size: 20px;
+            
+        }
+        .home1{
+            position:absolute;
+            top:10px;
+            
+
+            
+        }
+        .cart1{
+            position:absolute;
+            top:10px;
+            color:blue;
+            
+        }
+        .coupons1{
+            position:absolute;
+            top:10px;
+        }
+        .fav{
+            position:absolute;
+            top:10px;
+        }
+        .setting1{
+            position:absolute;
+            top:10px;
+        }
+        a:hover{
+
+            color:cornflowerblue;
+            background-color:cornsilk;
+            border:1px solid cyan;
+            border-radius: 20px;
+            border-width: 5px;
+            text-decoration:none ;
+            cursor: pointer;
+        }
+        .block2{
+            background-color:aliceblue;
+            position:absolute;
+            left:490px;
+            width:700px;
+            height:500px;
+            border-radius: 20px;
+        }
+        .block3{
+            background-color:aliceblue;
+            position:absolute;
+            left:490px;
+            width:700px;
+            height:300px;
+            border-radius: 20px;
+            top:600px;
+        }
+        .top{
+            color:cornflowerblue;
+            width:890px;
+            position:absolute;
+            left:10px;
+            border-radius: 20px;
+            height:40px;
+            padding:5px;
+            font-weight: bold;
+        }
+        .a{
+            position:absolute;
+            top:70px;
+            left:30px;
+            font-weight: bold;
+        }
+        .b{
+            position:absolute;
+            top:150px;
+            left:30px;
+            font-weight: bold;
+        }
+        .c{
+            position:absolute;
+            top:70px;
+            left:190px;
+            font-weight: bold; 
+        }
+        .d{
+            position:absolute;
+            top:150px;
+            left:190px;
+            font-weight: bold; 
+        }
+        .e{
+            position:absolute;
+            top:70px;
+            left:350px;
+            font-weight: bold; 
+        }
+        .f{
+            position:absolute;
+            top:150px;
+            left:350px;
+            font-weight: bold; 
+        }
+
+        .g{
+            position:absolute;
+            top:70px;
+            left:530px;
+            font-weight: bold; 
+        }
+        .h{
+            position:absolute;
+            top:150px;
+            left:530px;
+            font-weight: bold; 
+        }
+       .middle{ color:cornflowerblue;
+            width:890px;
+            position:absolute;
+            left:10px;
+            height:40px;
+            padding:5px;
+            font-weight: bold;
+       }
+       .last{
+        color:cornflowerblue;
+        position:absolute;
+        left:10px;
+        font-weight: bold;
+        top:10px;
+       }
+       .box{
+        position:absolute;
+        top:270px;
+        left:10px;
+       }
+       .box1{
+        position:absolute;
+        top:380px;
+        left:10px;
+       }
+       .box2{
+        position:absolute;
+        top:270px;
+        left:350px;
+       }
+       .box3{
+        position:absolute;
+        top:380px;
+        left:350px;
+       }
+       
+       .i{
+             position:absolute;
+             top:50px;
+             left:20px;
+             border:1px solid black;
+             width:550px;
+             border-radius: 20px;
+             height:15px;
+             padding:10px
+       }  
+       .j{
+        position:absolute;
+        top:50px;
+        left:600px;
+        border:1px solid blue;
+        border-radius: 20px;
+        width:70px;
+        height:15px;
+        padding:10px;
+        background-color: blue;
+        color:white;
+       }
+       .box4{
+        position:absolute;
+        top:120px;
+        left:20px;
+       }
+       .box5{
+        position:absolute;
+        top:120px;
+        left:240px;
+       }
+       .box6{
+        position:absolute;
+        top:120px;
+        left:460px;
+       }
+    </style>
+        <title>
+         Assignment-9
+        </title>
+    </head>
+    <body>
+        
+        <div class="header">
+    <div class="webpage">
+        <img src="audi.jpg" width="60px" class="picture" style="position:absolute;right:10px;border-radius: 20px;">
+                <ul>
+                    <div class="A"   style="order:1;position:absolute;left:1px;">IShadeed Store.</div>
+                    <div class="B" style="order:2;position:absolute;right:350px;">Home</div>
+                    <div class="C" style="order:3;position: absolute;right:270px;">About</div>
+                    <div class="D"  style="order:4;position:absolute;right:200px;">Works</div>
+                    <div class="E"  style="order:5;position:absolute;right:40px;">Ahmad Shadeed</div>
+                </ul>  
+        </div><br><br>
+        <div class="block1">
+            
+            <div class="home1"> <a href="https://web.whatsapp.com/" ><img src="home.jpg" width="30px">&nbsp;Home</a></div>
+            <div class="cart1"> <a href="https://www.google.co.in/" ><img src="cart1.jpg" width="30px">&nbsp;cart</a></div>
+            <div class="coupons1"><a href="https://www.facebook.com/"><img src="coupon1.jpg" width="30px">&nbsp;Coupons</a></div>
+            <div class="fav"><a href="https://www.instagram.com/"><img src="favourite.jpg" width="30px">&nbsp;Favourite items</a></div>
+            <div class="setting1"><a href="https://twitter.com/"><img src="setting.jpg" width="30px">&nbsp;Settings</a></div>
+            <br><br><br><br><br><br><br><br><br><br>
+            <footer><p style="font-size:15px;color:green;">*&#Here is the list you can place order,$#&cart the needed things$#</p></footer>
+        </div>
+        <div class="block2">
+            <div class="top"><img src="fire.jpg" width="20px"> Top seller</div>
+            <div class="a"><img src="sundarpichai.jpg" width="40px" style="position:absolute;border-radius: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jhon Smith<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;145 orders</div>
+            <div class="b"><img src="sundarpichai.jpg" width="40px" style="position:absolute;border-radius: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Billgates<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;200 orders</div>
+            <div class="c"><img src="sundarpichai.jpg" width="40px" style="position:absolute;border-radius: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tata birla<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;300 orders</div>
+            <div class="d"><img src="sundarpichai.jpg" width="40px" style="position:absolute;border-radius: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ambani<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;235 orders</div>
+            <div class="e"><img src="sundarpichai.jpg" width="40px" style="position:absolute;border-radius: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adhani<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;356 orders</div>
+            <div class="f"><img src="sundarpichai.jpg" width="40px" style="position:absolute;border-radius: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Joan Baiden<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;156 orders</div>
+            <div class="g"><img src="sundarpichai.jpg" width="40px" style="position:absolute;border-radius: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Modi<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;320 orders</div>
+            <div class="h"><img src="sundarpichai.jpg" width="40px" style="position:absolute;border-radius: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Savarkar<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;298 orders</div><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div class="middle"><img src="fire.jpg" width="20px"> Top Articles</div>
+            <div class="box"><img src="box.jpg" width="120px" height="90px"> <p style="position:absolute;top:1px;left:140px;width:180px;font-family: serif">How to design in a logo in 5 steps<br><cite style="color:cornflowerblue">by Ahmed shadeed</cite></p></div>
+            <div class="box1"><img src="box.jpg" width="120px" height="90px"> <p style="position:absolute;top:1px;left:140px;width:180px;font-family:serif;">How to design in a logo in 5 steps<br> <cite style="color:cornflowerblue">by Ahmed Shadeed</cite></p></div>
+            <div class="box2"><img src="box.jpg" width="120px" height="90px"> <p style="position:absolute;top:1px;left:140px;width:180px;font-family:serif;">The important of Lix design in business<br><cite style="color:cornflowerblue">by James Smith</cite></p></div>
+            <div class="box3"><img src="box.jpg" width="120px" height="90px"> <p style="position:absolute;top:1px;left:140px;width:180px;font-family: serif">The important of Lix design in business<br><cite style="color:cornflowerblue">by James Smith</cite></p></div>
+             </div>
+            <div class="block3">
+            <div class="last"><img src="fire.jpg" width="20px">Latest Bla Bla </div>
+            <div class="i">What are you looking for?</div>
+            <div class="j">Search</div>
+            <div class="box4"><img src="box1.jpg" width="170" height="100px"><p style="position:absolute;top:90px;">How to design in a logo in <br>5 steps<br><cite style="color:cornflowerblue">by Ahmed shadeed</cite></p></div>
+            <div class="box5"><img src="box1.jpg" width="170" height="100px"><p style="position:absolute;top:90px;">How to design the img layout in 5 steps<br><cite style="color:cornflowerblue">by Ahmed shadeed</cite></p></div>
+            <div class="box6"><img src="box1.jpg" width="170" height="100px"><p style="position:absolute;top:90px;">How to design the img layout in 5 steps<br><cite style="color:cornflowerblue">by Ahmed shadeed</cite></p></div>
+
+
+            </div>
+        </div>
+
+    </body>
+</html>
+
+
