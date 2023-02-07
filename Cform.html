@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>application form</title>
+        <style>
+            body{
+                background-color:aquamarine ;
+            }
+            table,tr,td,th{
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="color:deeppink;"><center>PERSONAL DETAILS</center></h1>
+        <hr color="black" width="500" size="4">
+        <form name="contact form" action="/day1.html" method="post">
+        <table align="center">
+            <tr>
+                <td>Name</td>
+                <td><input type=text name="t1" size="30" maxlength="20"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type=password name="t2" size="30" maxlength="8"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="e1" size="30" maxlength="40"></td>
+                
+            </tr>
+            <tr>
+                <td>Gender  </td>
+                <td><input type="radio" name="m1" >Male
+                <input type="radio" name="m1">Female</td>
+            </tr>
+            <tr>
+                <td >Contact#</td>
+                <td><input type="tel" id="phone" name="phone" maxlength="10" ></td>
+
+            </tr>
+            <tr>
+                <td><h3 style="color:deeppink;">Educational Qualifiation</h3></td>
+
+                </tr>
+                <tr>
+                    <td>Degree</td>
+                    <td><select name="d1">
+                        <option>----select----
+                        <option>CDC college
+                        <option>ABCD COLLEGE
+                        <option>Telangana college
+                        <option>Koti womens college
+                        <option>Osmania college
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Engineering</td>
+                    <td><select name="a1">
+                        <option>----select----
+                        <option>A tech college
+                        <option>B tech college
+                        <option>c tech college
+                        <option>D tech college
+                    </select>
+                </td>
+                </tr>
+                <tr>
+                    <td>Hobbies</td>
+                    <td><input type="checkbox" name=c1 >Reading books
+                        <input type="checkbox" name=c1 >playing chess
+                        <input type="checkbox" name=c1 >listing music
+                    </td>
+                </tr>
+                <tr>
+                    <td><h3 style="color:deeppink">Address</h3>
+                    <textarea name=v1 rows=5 cols=30></textarea></td>
+
+                </tr>
+                <tr>
+                    <td>Attach Resume</td>
+                    <td><input type="file" name="res"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" >
+                    <input type="submit" name="e1" value="SUBMIT &#8680;">
+                </td>
+                </tr>
+        </table>
+        </form>
+    </body>
+</html>
