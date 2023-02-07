@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1{
+                text-align: center;
+                color:black;
+                border-bottom:3px solid white;       
+            }
+            body{
+                background-color:blanchedalmond;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    
+            }
+            h2{
+                color:black;
+                
+                
+            }
+            .heading{
+                background-color: black;
+                color:white;
+                text-align: center;
+            }
+
+        </style>
+        <title>
+            form
+        </title>
+    </head>
+    <body>
+        <h1 class="heading">ASSIGNMENT-6</h1>
+        <h1>PERSONAL DETAILS</h1>
+        
+            <center>
+            <form>
+                <label for="name" >Name : &nbsp;</label>
+                <input type="text" id="name" name="firstname"><br><br>
+                
+                <label for="dob" >Date Of Birth : </label>
+                <input type="date" id="bod" name="bday"><br><br>
+                <label for="gender">Gender : </label>
+                <input type="radio" id="male" name="aaa">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="aaa">
+                <label for="female">Female</label><br><br>
+                
+                <label for="mbl">Mobile No : </label>
+                <input type="tel" id="mbl" class="phone number" pattern="[0-9]{3},[0-9]{4},[0-9]{3}"><br><br>
+                <label >Address : </label>
+                <textarea  rows="3" cols="20"></textarea><br><br>
+                <label for="email">Email-id : </label>
+                <input type="email" id="email" class="email"><br><br>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="pass" maxlength="8"><br><br>
+                <label for="col">Favourite Color:</label>
+                <input type="color" id="col" name="col"><br><br>
+                <label for="fru">favourite Fruits:</label>
+                
+                <input type="checkbox" id="fru" name="fru">Banana
+                
+                <input type="checkbox" id="fru" name="fru">Mango
+                <input type="checkbox" id="fru" name="fru">Sapota
+                <input type="checkbox" id="fru" name="fru">Watermelon
+                <input type="checkbox" id="fru" name="fru">Apple
+                
+                <h2>Educational Qualifications</h2>
+                <label for="deg">Degree : </label>
+                <select>
+                    <option >----select----</option>
+                    <option>Arunodhaya</option>
+                    <option >bashyam</option>
+                    <option >chaitanya degree collage</option>
+                    <option >dasharatha collage</option>
+                    <option >fathima collage</option>
+                    <option >eshwar collage</option>
+                    <option >gayathri collage</option>
+                </select>
+                <label for="ssc">SSC</label>
+                <select>
+                    <option >----select----</option>
+                    <option >Anganvadi school</option>
+                    <option >Banumathi high school</option>
+                    <option >Chaitanya school</option>
+                    <option >Damodhar high school</option>
+                    <option >Suhdoia"</option>
+                    <option >Uhsodhaya school"</option>
+                    <option >oijaoisjaoi"</option>
+                </select><br><br>
+                <label for="file">Choose a file</label>
+                <input type="file" id="file" name="file"><br><br>
+                <input type="submit" value="submit" >
+
+
+                
+
+            </form>
+        </center>
+    </body>
+</html>
