@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1{
+                background-color: black;
+                color: white;
+                text-align: center;
+            }
+            ul{
+                display:block;
+                list-style-type: none;
+                 background-color:deeppink;
+                text-align: center;
+                padding:5px;
+                margin:5px;
+                border:2px solid black;
+                 
+                
+            }
+            ul li{
+                display:inline-block;
+                padding:10px;
+                width:200px;
+                border-bottom:2px solid red;
+                font-size:20px;
+                background-color: rgb(23, 161, 136); 
+            }
+            ul li a:hover{
+                color:white;
+            }
+            ul li ul li a:hover{ color:white; } 
+            ul li ul{
+                position:absolute;
+                display:none; 
+            }
+            ul li:hover ul{display:block;
+            background-color:deeppink;}
+            ul li ul li {display:block !important;
+            background-color:deeppink;
+             border-bottom:none;
+            border:none;} 
+            ul li ul li:hover {background:deeppink;}
+            
+        </style>
+        <title>
+            navigation 
+        </title>
+    </head>
+    <body>
+        <h1>ASSIGNMENT-2</h1>
+        <nav>
+        <ul>
+            <li><a>HOME</a></li>
+            <li><a>COURSE</a>
+            <ul>
+                <li><a>MERN</a></li>
+                <li><a>JAVA</a></li>
+                <li><a>PYTHON</a></li>
+                <li><a>REACT</a></li>
+            </ul></li>
+            
+            <li><a>CONTACTUS</a></li>
+            <li><a>LOGOUT</a></li>
+        </ul>
+        </nav>
+    </body>
+</html>
