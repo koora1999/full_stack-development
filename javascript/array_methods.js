@@ -18,11 +18,13 @@ console.log(array1);
 let array=[30,40,20,50,70]
 array.push(60)
 console.log(array);
+
 //pop method
 array.pop();
  console.log(array);
 console.log(array.pop(5));
 console.log(array);
+
 //shift method
 let number=[40,50,30,70,18]
 number.shift();
@@ -31,6 +33,7 @@ console.log(number);
 //unshift method
 number.unshift(100,200)
 console.log(number);
+
 //declaring the variable
 
 let a=number.shift();
@@ -38,8 +41,8 @@ let a1=number.shift();
 console.log(a);
 console.log(a1);
 console.log(number);
-//splice method
 
+//splice method
 let marks=[100,200,300,400]
 marks.splice(0,2);
 console.log(marks);
