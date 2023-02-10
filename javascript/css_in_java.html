@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="condition.js" ></script>
+        <title>
+                changing the css style by using the javascript
+        </title>
+    </head>
+    <body>
+          <button onclick="document.getElementById('demo').innerHTML=Date()">
+        click here to display the date and time</button>
+        <p id="demo"></p>
+<!--js can change the html content-->
+        <button onclick="document.getElementById('demo1').innerHTML='hello pravalika'">
+        click here</button>
+        <p id="demo1">js can change the html content</p>
+
+<!-- js can hange the thml attributes-->
+
+     <button onclick="document.getElementById('image').src='b7.jpg'">display background</button>
+     <img  id="image" src="b1.jpg" alt="background image" width="200px">
+     <button onclick="document.getElementById('image').src='b1.jpg'">previous background</button><br><br>
+<!--js can change the css ,html style--> 
+     <button onclick="document.getElementById('sty').style.background='yellow'">color</button>    
+     <button onclick="document.getElementById('sty').style.fontWeight='bold'">font</button> 
+     <button onclick="document.getElementById('sty').style.display='none'">hidden</button> 
+     <button onclick="document.getElementById('sty').style.display='block'">visible</button> 
+<p id="sty">hello pravalika</p><br><br>
+<!--display property-->
+<p id="dis" style="display:none">web development</p>
+<button onclick="document.getElementById('dis').style.display='block'">display</button> 
+<button onclick="document.getElementById('dis').style.display='inline-block'">inline-block</button> 
+<button onclick="document.getElementById('dis').style.display='none'">none</button> 
+</body>
+</html>
