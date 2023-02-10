@@ -10,6 +10,8 @@ function reversenum(){
     
     
     reversenum();
+
+  //assignments
     
     //wap sum of the num
     
