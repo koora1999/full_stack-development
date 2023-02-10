@@ -33,6 +33,7 @@ console.log(number);
 //unshift method
 number.unshift(100,200)
 console.log(number);
+
 //declaring the variable
 
 let a=number.shift();
