@@ -1,6 +1,6 @@
 //find the salary from the array whose valuse is 2000 and delete the 2000
 
-//assignment
+//assignment-
 
 let array1=[1000,3000,4000,2000]
 console.log(array1)
@@ -12,6 +12,28 @@ console.log(check);
 array1.pop();
 console.log(array1);
 
+
+//create city as an array find the city entered by the user
+  //delete the chennai,enter the true or false
+//assignment
+
+ let city=["hyd","hnk","wrgl","chennai"]
+ let check1=city.find(function(ele){
+     return ele==="chennai"; 
+ })
+ console.log(check1);
+city.pop();
+console.log(city);
+
+ function displaycity()
+ {
+ if(city==="chennai"){
+          console.log("true");
+      }else{
+       console.log("false");
+      }    
+ }
+ displaycity();
 
 
 //push and the pop methods
