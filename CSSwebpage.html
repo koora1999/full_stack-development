@@ -170,6 +170,26 @@ footer{
     color:white;
     background-color: rgb(45, 49, 47);
 }
+  .side-6{
+    width:100%;
+    height:300px;
+    background-color:slategrey ;
+    display: flex;
+}
+.but4{
+    padding:15px;
+    background-color: green;
+    color:white;
+    border:1px solid green;
+    border-radius:20px;
+    align-items: center;
+    margin:10px;
+    position: relative;
+    left:500px;
+    width:150px;
+    font-size: 20px;
+}
+      
 
     </style>
 </head>
@@ -303,6 +323,44 @@ footer{
           
           <img src="https://www.w3schools.com/images/img_subs_160.png" alt="" style="position:absolute;left:50px;top:600px">
     </div>
+    <div class="side-6">
+        <img  id="img1"src="b2.jpg" alt="" width="350px" height="200px" style="position: relative;top:40px;left:100px;">
+        
+       <img id="img2" src="b10.jpg" alt="" width="350px" height="200px" style="position: relative;top:40px;left:170px;"> 
+        <img  id="img3" src="b14.jpg" alt="" width="380px"  height="200px" style="position: relative;top:40px;left:250px">
+      </div>
+      <div style="background-image: url('background.jpg')">
+      <button class="but4" onclick="show()">visible</button>
+      <button class="but4" onclick="hideme()">hidden</button>
+      <button class="but4" onclick="reset()">resetall</button>
+      </div>
+      <script>
+             let img1=document.getElementById("img1")
+             img1.style.display="none";
+             let img2=document.getElementById("img2")
+             img2.style.display="block";
+             let img3=document.getElementById("img3")
+             img3.style.display="none"
+  
+                  function show(){
+                      let img1=document.getElementById("img1")
+                      img1.style.display="block";
+                  }
+                  function hideme(){
+                      let img2=document.getElementById("img2")
+                      img2.style.display="none";
+                  }
+                  function reset(){
+                      let img1=document.getElementById("img1")
+                      img1.style.display="block";
+                      let img2=document.getElementById("img2")
+                      img2.style.display="block";
+                      let img3=document.getElementById("img3")
+                      img3.style.display="block";
+                  }
+  
+      </script>
+  
     <footer >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning. <br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tutorials, references, and examples are constantly reviewed to avoid errors,<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;& but we cannot warrant full correctness of all content. While using W3Schools,<br>
