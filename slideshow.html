@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>slideshow</title>
+        <link rel="stylesheet" href="style.css">
+     <style>
+        body{
+            width:100%;
+            height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+       .top1{
+        
+        width:600px;
+        height:600px;
+        box-shadow: 0 0 32px -0px black;
+        
+       }
+       
+       
+       div>img{
+        width:100%;
+        height:100%;
+       }
+       img:hover{
+        border: 1px solid black;
+       }
+     </style>
+
+    </head>
+    <body>
+        <div class="top1">
+            <img id="img1" src="" >
+        </div>
+        
+
+
+
+        <script>
+           var cars=['/images/car1.jpeg','/images/car2.jpeg','/images/car3.jpeg','/images/car4.jpeg']
+           var i = 0;
+           function slideShow(){
+            document.getElementById("img1").src=cars[i];
+            if(i<cars.length-1){
+                i++;
+            }
+            else{
+                i=0;
+            }
+            setTimeout("slideShow()",3000);
+           }
+           window.onload=slideShow;
+//
+
+           
+
+        </script>
+
+    </body>
+    </html>
+   
