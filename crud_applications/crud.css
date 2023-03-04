@@ -1,0 +1,27 @@
+body{
+    font-family: sans-serif;
+    margin: 50px 50px;
+}
+.container{
+    display:flex;
+    gap:100px;
+}
+#posts div{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#posts{
+    width:400px
+}
+.options{
+    display:flex;
+    gap:40px;
+}
+i{
+    cursor: pointer;
+}
+#msg{
+    color:red;
+
+}
