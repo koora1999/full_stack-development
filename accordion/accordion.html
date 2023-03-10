@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordian</title>
+<link rel="stylesheet" href="accordion.css">
+</head>
+<body>
+    <div class="accordion">
+        <div class="contentBx">
+            <div class="label">What is Javascript?</div>
+            <div class="content">
+                <p>
+                    JavaScript frameworks are an essential part of modern front-end web development,
+                     providing developers with proven tools for building scalable, interactive web applications. 
+                     This module gives you some fundamental background knowledge about how client-side frameworks work and how they fit into your toolset,
+                      before moving on to a series of tutorials covering some of today's most popular ones.
+                </p>
+            </div>
+        </div>
+        
+        <div class="contentBx">
+            <div class="label">What is CSS?</div>
+            <div class="content">
+                <p>
+                    CSS is a rule-based language — you define the rules by specifying groups of styles that should
+                     be applied to particular elements or groups of elements on your web page.
+                    For example, you can decide to have the main heading on your page to be shown as large red text.
+                     The following code shows a very simple CSS rule that would achieve the styling described above:
+                </p>
+            </div>
+        </div>
+        <div class="contentBx">
+            <div class="label">What is HTML?</div>
+            <div class="content">
+                <p>
+                    HTML is a markup language that defines the structure of your content. HTML consists of a series of elements, which you use to enclose,
+                     or wrap, different parts of the content to make it appear a certain way, or act a certain way.
+                    Images. Let's turn our attention to the element again: As we said before, it embeds an image into our page in the position it appears.
+                    Marking up text. This section will cover some essential HTML elements you'll use for marking up the text. Headings.
+                     Heading elements allow you to specify that certain parts of your content are headings — or subheadings.
+                   
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+       const contentbx = document.getElementsByClassName("contentBx")
+       for(let i=0;i<contentbx.length;i++){
+        contentbx[i].addEventListener('click',function(){
+            this.classList.toggle('active')
+        })
+       }
+    </script>
+</body>
+</html>
