@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup page</title>
+    <link rel="icon" href="/images/favicon1.jpg">
+    <link rel="stylesheet" href="signup.css">
+        
+</head>
+<body>
+    <div class="box1" id="box1">
+        
+    </div>
+    <div class="box" id="box">
+        <h3>Sign Up</h3>
+         
+        <div class="menu">
+            <input id="username" type="text" placeholder="username"><br>
+            <p id="msg"></p>
+            <input id="name" type="text" placeholder="name"><br>
+            <p id="msg1"></p>
+            <input id="pass" type="password" placeholder="password" maxlength="8"><br>
+              <p id="valid"></p>
+            <input id="repass" type="password" placeholder="re-enter password" maxlength="8"><br>
+            <p id="valid1"></p>
+            <input id="check" type="checkbox" style="height:20px"><i style="color:white">I agree the <span style="text-decoration: underline;color:deeppink;cursor: pointer;text-decoration: none;">Terms and Conditions</span></i><br>
+            <button type="button" id="button" onclick="opensignup()">Sign up</button>
+           
+            <b>Are you Existing member ? <i><a href="login.html">CLICK HERE</a></i></b>
+
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="signup.js"></script>
+</body>
+</html>
