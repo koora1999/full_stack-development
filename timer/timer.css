@@ -1,0 +1,35 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(163, 221, 240, 0.5);
+}
+.timer{
+    width:300px;
+    background-color: rgba(0,0,0,0.3);
+    color:white;
+    height:200px;
+    text-align: center;
+    border-radius: 20px;
+
+}
+.timer .stopwatch{
+    margin-top: 20px;
+
+}
+.timer .buttons{
+    margin-top: 20px;
+    
+}
+.timer .buttons img{
+    border-radius: 30px;
+    margin:20px;
+   cursor: pointer;
+}
