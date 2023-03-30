@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather forecasting</title>
+    <link rel="stylesheet" href="weather_forecasting.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+   
+    <div class="weather_forecasting">
+
+      <div class="header">
+         <h1>WEATHER FORECASTING</h1>
+         <div class="input_data">
+            <input type="text" placeholder="location..." id="inputvalue">
+         <button type="button" class="btn" id="btn" >Search</button>
+         </div>
+         
+         <p id="msg"></p>
+         
+        </div>
+
+        <div class="location_not_found" id="location_not_found">
+         <h1>Sorry, Location Not Found</h1>
+         <img src="/images/error.jpg" alt="">
+        </div>
+        <div class="weather_details">
+         <div class="place_city">
+            <p id="place"></p> &nbsp;<p id="country"></p>
+         </div>
+         <div id="date"></div>
+         <div id="time"></div>
+         <div id="temp"></div>
+         <div id="desc"></div>
+         <div id="min_max"></div>
+         <div class="speed_hum">
+            <div >
+               <p id="speed" ></p>
+               <p class="spe"></p>
+            </div>
+
+         <div >
+            <p id="humidity"></p>
+            <p class="hum"></p>
+         </div>
+         </div>
+        </div>
+            
+    </div>
+   
+      
+        
+
+    <script>
+
+
+let btn = document.getElementById("btn")
+let inputvalue = document.querySelector("#inputvalue")
+let msg = document.getElementById("msg")
+
+//checking whether it is valid or invalid
+btn.addEventListener("click",function(){
+   if(inputvalue.value == ""){
+           msg.innerHTML="enter the location"
+   }
+   else{
+      msg.innerHTML="";
+   }
+   checkweather(inputvalue.value);
+reset();
+})
+//reset the input
+function reset(){
+   document.querySelector("#inputvalue").value="";
+}
+
+
+
+
+let weather_details = document.querySelector(".weather_details")
+let weather_img = document.querySelector(".weather_img")
+let place = document.getElementById("place")
+let country = document.getElementById("country")
+let temp = document.getElementById("temp")
+let date = document.getElementById("date")
+let desc = document.getElementById("desc")
+let speed = document.getElementById("speed")
+let time = document.getElementById("time")
+let humidity = document.getElementById("humidity")
+let min_max = document.getElementById("min_max")
+let location_not_found = document.getElementById("location_not_found")
+
+
+
+
+ async function checkweather(city){
+   
+
+const apikey = `1cb9c62d997f737edff5f73c90ce8fbc`
+const apiurl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`
+
+const weather_data = await fetch(`${apiurl}`).then(response => response.json());
+
+if(weather_data.cod === "404"){
+location_not_found.style.display="block";
+weather_details.style.display= "none";
+console.log("error")
+
+return;
+
+}
+
+
+weather_details.style.display= "block";
+location_not_found.style.display="none";
+console.log(weather_data);
+
+let currenttime = new Date();
+
+date.innerHTML=datemanage(currenttime);
+
+time.innerHTML = currenttime.getHours()+':'+currenttime.getMinutes()+':'+currenttime.getSeconds();
+
+place.innerHTML = weather_data.name;
+
+country.innerText = weather_data.sys.country;
+
+temp.innerHTML = `${Math.round(weather_data.main.temp-273.15)}°C`;
+
+desc.innerHTML = weather_data.weather[0].description;
+
+speed.innerHTML = `Speed:${weather_data.wind.speed}km/h`;
+
+humidity.innerHTML = `Humidity:${weather_data.main.humidity}%`;
+
+min_max.innerHTML = `${Math.round(weather_data.main.temp_max-273.15)}°C(max)/${Math.round(weather_data.main.temp_min-273.15)}°C(min)`;
+ 
+
+
+if(weather_data.desc == "clouds"){
+   document.body.style.backgroundImage = "url('/images/cloud.jpg')";
+}else if(weather_data.desc == "rain"){
+   document.body.style.backgroundImage = "url('/images/rainy.jpg')";
+}
+else if(weather_data.desc == "snow"){
+   document.body.style.backgroundImage = "url('/images/snow.jpg')";
+}
+else if(weather_data.desc == "drizzle"){
+   document.body.style.backgroundImage = "url('/images/drizzle.jpg')";
+}
+else if(weather_data.desc == "clear"){
+   document.body.style.backgroundImage = "url('/images/clear.jpg')";
+}
+
+}
+
+function datemanage(days_months){
+   let days = ['Sunday','Monday','Tuesday','Wednasday','Thurday','Friday','Saturday'];
+   let months = ['January','February','March','April','May','June','July','august','September','October','November','December']
+    let year = days_months.getFullYear();
+    let month = months[days_months.getMonth()];
+    let date = days_months.getDate();
+    let day = days[days_months.getDay()];
+
+    return `${date} ${month} (${day}) , ${year}`
+
+
+}
+
+    </script>
+
+</body>
+
+</html>
