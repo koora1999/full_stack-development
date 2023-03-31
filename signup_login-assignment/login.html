@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,12 +11,11 @@
 
 </head>
 <body>
-    <div class="divtag">
-
+    
     </div>
     
     <div class="box1" id="box1">
-        <h3>Login</h3>
+        <h3><u>Login</u></h3>
 
         <div class="menu1">
 
@@ -24,12 +24,25 @@
             <input id="pass" type="password" placeholder="password" maxlength="8"><br>
               <p id="valid"></p>
               <i><a href="#">forgotten password?</a></i>
-            <button type="button" id="button1" onclick="openlogin()">Login</button>
+              <div class="button">
+                <button type="button" id="button1" onclick="openlogin()"  >Login</button> 
+        <button type="button" id="button1" onclick="opendisplay()" >submit </button> 
+
+              </div>
+        
             <b>Not a Member ? <i><a href="signup.html">REGISTER NOW</a></i></b>
 
         </div>
     </div>
 
+    <div class="display" id="display">
+        <img src="/images/tick.jpeg" alt="">
+        <h2>Thank You</h2>
+        <h4>Your deatails have been submitted successfully.Thanks!</h4>
+        <button type="button" class="but" onclick="closedisplay()">Ok</button>
+    </div>
+
     <script src="login.js"></script>
+    
 </body>
 </html>

@@ -1,0 +1,165 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio website</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head> 
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="logo"><span>K</span>oora.</h1>
+                <ul id="sidemenu">
+                    <i class="fa fa-times" onclick="closemenu()"></i>
+                    <li><a href="#">Home</a> </li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    
+                </ul>
+                <i class="fa fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="pic-text">
+                <div class="header-text">
+                    <p>Frontend Developer</p>
+                    <h1>Hi, I'm <span> Koora </span><br>Pravalika From India</h1>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    <!-- -------------------------------------------------------about------------------------------------------------ -->
+    <div class="about" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="/images/paviportfolio.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p></p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                        <p class="tab-links " onclick="opentab('skills')">Skills</p>
+
+
+                    </div>
+                    <div class="tab-contents active-tab" id="education">
+                        <ul>
+                            <li> <span>current</span><br>Full Stack Web Development Training at CareerX</li>
+                            <li> <span>2021-2023</span><br>MCA from Koti Women's Collage </li>
+                            <li> <span>2017-2020</span><br>BSC from Chaitanya Deemed To Be University</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="skills">
+                        <ul>
+                            <li> <span>HTML</span></li>
+                            <li> <span>CSS</span></li>
+                            <li> <span>JAVASCRIPT</span></li>
+                            <li> <span>BOOTSTRAP</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -----------------------------------------------portfolio -------------------------------------->
+    <div id="portfolio">
+        <div class="container" id="container">
+            <h1 class="title">Portfolio</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="/images/work-1.png" alt="">
+                    <div class="layer">
+                        <h3>Sign Up</h3>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="/images/work-2.png" alt="">
+                    <div class="layer">
+                        <h3>Clock</h3>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="/images/work-3.png" alt="">
+                    <div class="layer">
+                       <h3>Calculater</h3>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="/images/work-4.png" alt="">
+                    <div class="layer">
+                        <h3>Star Rating</h3>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+    <!--------------------------------------------contact----------------------------- -->
+    <div class="contact" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="title">Contact Me</h1>
+                    <p> <i class="fa fa-paper-plane"></i> contact@example.com</a> </p>
+                    <p><i class="fa fa-phone-square"></i>0123456789</p>
+                    <div class="social-media">
+                        <a href=""><i class="fa fa-facebook"></i></a>
+                        <a href=""><i class="fa fa-twitter-square"></i></a>
+                        <a href=""><i class="fa fa-instagram"></i></a>
+                        <a href=""><i class="fa fa-linkedin"></i></a>
+                    </div>
+                    <a href="" class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form action="">
+                        <input type="text" name="name" placeholder="your name" required >
+                        <input type="email" name="email" placeholder="your mail" required >
+                        <textarea name="message" id=""  rows="6" placeholder="message"></textarea>
+                        <button type="submit" class="btn btn2">submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright <span style="color:brown;">©</span> <span style="color:brown;font-size:20px;">K</span>oora. Made with <i class="fa fa-heart"></i></p>
+        </div>
+    </div>
+       <script>
+        let tablinks = document.getElementsByClassName("tab-links")
+        let tabcontents = document.getElementsByClassName("tab-contents")
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link")
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab")
+                }
+                event.currentTarget.classList.add('active-link')
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+       </script>
+    <!-- ----------------phone view------------ -->
+    <script>
+        let sidemenu = document.getElementById("sidemenu")
+
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+</body>
+
+</html>
