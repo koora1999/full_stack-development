@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body{display:flex;justify-content: center;align-items: center;height:100vh;background: linear-gradient(to left bottom,lightgreen,pink);font-family:'Courier New', Courier, monospace;font-size: 25px;}
+        .container{background: rgba(225,225,225,.4);width:90%;height:400px;text-align: center;border-radius: 20px;margin:50px;}
+        h1{margin-top:30px;}
+        .btn{padding:10px;width:200px;font-size: 20px;margin-top:50px;border-radius: 10px;outline:none;border:white;}
+        #error{display:none;}
+    </style>
+</head>
+<body>
+   <div class="container">
+    <h1>RANDOM QUOTE'S</h1>
+    <p id="error">Cannot Fetch the data,You are in offline</p>
+    <div id="word">
+    <p id="quote"><i class="fa fa-quote-left" aria-hidden="true"></i>quote<i class="fa fa-quote-right" aria-hidden="true"></i></p>
+    <p id="author_name">~author</p>
+    </div>
+    <button class="btn" id="btn">QUOTE</button>
+   </div> 
+   <script>
+         let btnEle = document.getElementById("btn");
+         let quoteEle = document.getElementById("quote");
+         let AuthorEle = document.getElementById("author_name");
+          let wordEle = document.getElementById("word")
+         let error = document.getElementById("error");
+
+         
+           
+
+         async function getquote(){
+
+            try {
+                quoteEle.innerHTML=`Updating....`;
+                AuthorEle.innerHTML=`Updating....`;
+                btnEle.innerHTML='Loading....';
+                btnEle.disabled=true;
+                const APIurl = "https://api.quotable.io/random";
+            const response = await fetch(APIurl);
+            const dataquote = await response.json()
+            console.log(dataquote);  
+            AuthorEle.innerHTML=`~${dataquote.author}`;
+            quoteEle.innerHTML=`<i class="fa fa-quote-left" aria-hidden="true"></i>${dataquote.content}<i class="fa fa-quote-right" aria-hidden="true"></i>`
+            btnEle.innerHTML='QUOTE';
+                btnEle.disabled=false;
+            
+            } catch (error) {
+                btnEle.innerHTML='QUOTE';
+                btnEle.disabled=false;
+                quoteEle.innerHTML=`Cannot fetch the data,You'r in offline`;
+                AuthorEle.innerHTML=``;
+
+            
+                
+
+            }
+            
+        }
+        
+
+         btnEle.addEventListener("click",function(){
+           
+           getquote();
+         })
+
+
+
+
+   </script>
+</body>
+</html>

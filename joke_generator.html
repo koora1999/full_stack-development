@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>joke generator</title>
+    <style>
+        body{}
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <h1 class="heading" id="heading">Joke Generator</h1>
+        <p class="joke" id="joke">Jokes</p>
+        <button class="btn" id="btn" type="button">Tell Me A Joke</button>
+    </div>
+    <script>
+        let btn = document.getElementById("btn");
+        let joke = document.getElementById("joke");
+        const APIkey = `aduolCTYj/nxuxH9rMK9sw==LvMsHGzNbbwOSFYh`;//api key
+        const APIurl = `https://api.api-ninjas.com/v1/dadjokes?limit=1`;//here we can give the limit from 1 to 10,limit means at a time it will generate the given number of jokes
+
+
+        
+        const options ={
+            method: 'GET',
+            headers:{"X-Api-Key": APIkey}
+        };
+
+        async function generate(){
+            
+            //handle the success part
+            try { 
+                joke.innerHTML=`getting...`;
+                btn.innerHTML=`Loading...`;
+                btn.disabled = true;
+
+            //should get one response from
+            //using async and await it will directly display the console.log("data"),without fetching the data ,so we have to use await ,then it will wait untill the fetch completes
+            const response = await fetch(APIurl,options)//fetchting the data from the following url and options
+            const data = await response.json();//store the response in data and convert the data response into json()
+           console.log(data);
+
+           btn.disabled = false;
+           btn.innerHTML=`Tell Me A Joke`;
+                
+           document.getElementById("joke").innerHTML = data[0].joke;//
+
+             //handle the error part
+            } catch (error) { 
+                document.getElementById("joke").innerHTML="an error accured, you'r in offline";
+
+            }
+
+            
+        }
+
+
+        btn.addEventListener("click",generate);
+
+
+
+
+//aduolCTYj/nxuxH9rMK9sw==LvMsHGzNbbwOSFYh
+        //https://api.api-ninjas.com/v1/dadjokes?limit=1;
+    </script>
+</body>
+</html>

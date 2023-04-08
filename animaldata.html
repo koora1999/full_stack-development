@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animals data</title>
+    <style>
+        *{margin:0;padding:0;box-sizing: border-box;}
+        body{display:flex;align-items: center;justify-content: center;background:linear-gradient(30deg,deeppink,green,yellow);height:100vh;}
+        .container{width:600px;max-height:600px;background-color: rgba(225,225,225,.4);text-align: center;}
+        .container h1{text-shadow: 5px 5px 10px 80px yellow;color:green;} 
+        #dataele{padding:10px;font-size: 20px;font-weight: 600;}
+        #dataele .col_1 .col_2{padding:10px;margin:10px;}
+       #msg{display:none;}
+       #button{padding:10px;color:green;margin:10px;width:80px;border-radius:10px;outline:none;border:none;cursor: pointer;}
+       #inputtext{padding:10px;margin:10px;width:200px;border-radius: 10px;outline:none;border:none;font-size: 20px;text-transform: capitalize;}
+       span{font-size: 30px;color:brown}
+    </style>
+</head>
+<body>
+    <form action="">
+    <div class="container" id="container">
+        <h1 id="animals" class="animals">ANIMALS DATA</h1>
+     <span >Animal Name :</span> <input type="text" id="inputtext" placeholder="Animal Name....">
+       <button type="button" id="button" >Search</button>
+       <p id="msg">enter the correct animal name</p>
+       <div class="dataele" id="dataele">
+        <div class="col_1">
+            <p id="name">name</p>
+            <p id="color">color</p>
+            <p id="kingdom">kingdom</p>
+            <p id="locations">locations</p>
+            <p id="commonname">commanname</p>
+           </div>
+           <div class="col_2">
+            <p id="diet">diet</p>
+            <p id="family">family</p>
+            <p id="life_span">lifespan</p>
+            <p id="weight">weight</p>
+            <p id="type">type</p>
+           </div>
+       </div>
+        
+    </div>
+</form>
+    <script>
+        let inputtext = document.getElementById("inputtext")
+        let btn = document.getElementById("button");
+        let dataele = document.getElementById("dataele");
+        let msg = document.getElementById("msg")
+
+
+        dataele.style.display = "none";
+
+        async function getanimals(animal){
+            try {
+                const apiURL = `https://api.api-ninjas.com/v1/animals?name=${animal}`
+            const apiKEY = `aduolCTYj/nxuxH9rMK9sw==LvMsHGzNbbwOSFYh`;
+            const options = {
+            method: 'GET',
+            headers: { 'X-Api-Key':apiKEY },
+        };
+        const response = await fetch(`${apiURL}`,options);
+        const data = await response.json();
+
+        console.log(data[0]);
+        dataele.style.display = "block";
+        msg.style.display = "none";
+         document.getElementById("color").innerHTML =`color:${data[0].characteristics.color}` ;
+         document.getElementById("locations").innerHTML = `location:${data[0].locations}`;
+         document.getElementById("kingdom").innerHTML = `Kingdom:${data[0].taxonomy.kingdom}`;
+         document.getElementById("family").innerHTML = `Family:${data[0].taxonomy.family}`;
+         document.getElementById("commonname").innerHTML = `Common-Name:${data[0].characteristics.common_name}`;
+         document.getElementById("life_span").innerHTML = `Life-Span:${data[0].characteristics.lifespan}`;
+         document.getElementById("diet").innerHTML = `Diet:${data[0].characteristics.diet}`;
+         document.getElementById("name").innerHTML =`Name:${data[0].name}` ;
+         document.getElementById("weight").innerHTML =`Weight:${data[0].characteristics.weight} `;
+         document.getElementById("type").innerHTML =`Type:${data[0].characteristics.type} `;
+
+            } catch (error) {
+       
+        
+        msg.style.display = "block";
+        dataele.style.display = "none";
+            }
+            
+        }
+
+
+        btn.addEventListener("click",function(){
+          getanimals(inputtext.value);
+          
+          reset();
+        });
+
+        function reset(){
+            document.getElementById("inputtext").value="";
+        }
+    </script>
+</body>
+</html>
+
+
