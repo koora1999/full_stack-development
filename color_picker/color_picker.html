@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color picker</title>
+    <style>
+        body{position:absolute;left:50%;transform: translate(-30%);height:100vh;}
+        .container{display:flex;width:500px;height:400px;}
+        h1{font-family: 'Courier New', Courier, monospace;text-shadow:3px 3px  gray;font-size:40px;}
+     .left{border:none;flex-basis:25%;}
+     .left button{font-size:20px;font-weight: bold;font-family: 'Courier New', Courier, monospace;font-style: italic;}
+     .right button{font-size:20px;font-weight: bold;font-family: 'Courier New', Courier, monospace;}
+     .right{border:none;flex-basis: 20%;}
+       #yellow{border:none;width:120px;height:100px;text-align: center;background-color:#ffff00;border-radius: 10px;box-shadow: 2px 2px 5px gray;cursor: pointer;} 
+       .red{border:none;margin-top:10px;width:120px;height:100px;text-align: center;background-color: #eb0e0e;border-radius: 10px;box-shadow: 2px 2px 5px gray;cursor: pointer;}
+       .deeppink{border:none;margin-top:10px;width:120px;height:100px;text-align: center;background-color: #ff1493;border-radius: 10px;box-shadow: 2px 2px 5px gray;cursor: pointer;}
+       .blue{border:none;margin-top:10px;width:120px;height:100px;text-align: center;background-color: #0000ff;border-radius: 10px;box-shadow: 2px 2px 5px gray;cursor: pointer;}
+       .brown{border:none;width:120px;height:100px;text-align: center;background-color: #a52a2a;border-radius: 10px;box-shadow: 2px 2px 5px gray;cursor: pointer;}
+       .green{border:none;margin-top:10px;width:120px;height:100px;text-align: center;background-color: #14ae45;border-radius: 10px;box-shadow: 2px 2px 5px gray;cursor: pointer;}
+       .cadetblue{border:none;margin-top:10px;width:120px;height:100px;background-color: #5f9ea0;border-radius: 10px;box-shadow: 2px 2px 5px gray;cursor: pointer;}
+       .crimson{border:none;margin-top:10px;width:120px;height:100px;text-align: center;background-color: #dc143c;border-radius: 10px;box-shadow: 2px 2px 5px gray;cursor: pointer;}
+       .dec{width:100%;padding:20px;border-radius: 10px;font-size: 20px;font-weight: bold;font-family: 'Courier New', Courier, monospace;}
+    </style>
+</head>
+<body>
+    <h1>COLOR PICKER</h1>
+    <div class="container">
+         <div class="left">
+            <button class="yellow" id="yellow">Yellow</button>
+        <button class="red" id="red">Red</button>
+        <button class="deeppink" id="deeppink">Deeppink </button>
+        <button class="blue" id="blue">Blue</button>
+         </div>
+         <div class="right">
+        <button class="brown" id="brown">Brown</button>
+        <button class="green" id="green">Green</button>
+        <button class="cadetblue" id="cadetblue">Cadetblue </button>
+        <button class="crimson" id="crimson">Crimson</button>
+         </div>
+        
+    </div><br><br><br>
+    <button class="dec" id="dec">Background-Color :</button>
+    <script>
+        let yellowel = document.getElementById("yellow")
+        let redel = document.getElementById("red")
+        let deeppinkele = document.getElementById("deeppink")
+        let blueel = document.getElementById("blue")
+        let decel = document.getElementById("dec")
+
+        yellowel.addEventListener("click",function(){
+            document.body.style.backgroundColor="yellow";
+            decel.innerText = `BACKGROUND-COLOR : #ffff00`
+        })
+        redel.addEventListener("click",function(){
+            document.body.style.backgroundColor="red";
+            decel.innerText = `BACKGROUND-COLOR : #eb0e0e`
+        })
+        deeppinkele.addEventListener("click",function(){
+            document.body.style.backgroundColor="deeppink";
+            decel.innerText = `BACKGROUND-COLOR : #ff1493`
+        })
+        blueel.addEventListener("click",function(){
+            document.body.style.backgroundColor="blue";
+            decel.innerText = `BACKGROUND-COLOR : #0000ff`
+        })
+
+        let brownel = document.getElementById("brown")
+        let greenel = document.getElementById("green")
+        let cadetblueel = document.getElementById("cadetblue")
+        let crimsonel = document.getElementById("crimson")
+
+        
+        brownel.addEventListener("click",function(){
+            document.body.style.backgroundColor="brown";
+            decel.innerText = `BACKGROUND-COLOR : #a52a2a`
+        })
+        greenel.addEventListener("click",function(){
+            document.body.style.backgroundColor="green";
+            decel.innerText = `BACKGROUND-COLOR : #14ae45`
+        })
+        cadetblueel.addEventListener("click",function(){
+            document.body.style.backgroundColor="cadetblue";
+            decel.innerText = `BACKGROUND-COLOR : #5f9ea0`
+        })
+        crimsonel.addEventListener("click",function(){
+            document.body.style.backgroundColor="crimson";
+            decel.innerText = `BACKGROUND-COLOR : #dc143c`
+        }) 
+        
+
+    </script>
+</body>
+</html>
